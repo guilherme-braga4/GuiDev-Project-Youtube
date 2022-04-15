@@ -1,5 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
+import InputMask from "react-input-mask";
 
 function App() {
   //Aqui iremos tornar a nossa "página dinâmica", através do Javascript
@@ -56,20 +57,21 @@ function App() {
           <div className="container-input-label">
             <div className="childen-container-input-label">
               <label>Quanto você mede?</label>
-              <input
+              <InputMask
                 placeholder="ALTURA"
                 onChange={handleChange}
                 name="altura"
-                type="number"
+                mask="9.99"
               />
             </div>
             <div className="childen-container-input-label">
               <label>Quanto você pesa?</label>
-              <input
+              <InputMask
                 placeholder="PESO"
                 onChange={handleChange}
                 name="peso"
-                type="number"
+                // type="number"
+                // mask=""
               />
             </div>
           </div>
