@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background-color: red; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #244BC5;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form label {
+  color: white;
+  font-size: 20px;
+  font-weight: light;
+  font-family: Poppins;
+}
+
+.form input {
+  color: #FFF;
+  font-size: 20px;
+  font-family: Poppins;
+  background-color: transparent;
+  border: 1px solid #FFF;
+  border-radius: 8px;
+}
+
+.form input::placeholder {
+  color: #FFF;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.form button {
+  color: #244BC5;
+  font-size: 20px;
+  font-family: Poppins;
+  border: 30px;
+  background-color: #FFF;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+  
+}
+
+.container-button {
+  /* background-color: cyan; */
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 30%;
+  justify-content: space-around;
+}
+
+.container-input-label {
+  /* background-color: orange; */
+  height: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* background-color: orange; */
 }
 
-.App-link {
-  color: #61dafb;
+.childen-container-input-label {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
