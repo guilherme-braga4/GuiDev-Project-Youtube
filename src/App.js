@@ -22,11 +22,11 @@ function App() {
     console.log('estamos dentro do handleSubmit')
     console.log('form handleSubmit', form)
     if ((!form.altura && !form.peso) || !form.peso || !form.altura) {
+      alert('Os valores não podem ser inválidos. Digite o valor corretamente')
+    } else {
       const imc = form.peso / (form.altura * form.altura)
       console.log('imc', imc)
-      alert('Seu IMC é ' + imc)
-    } else {
-      alert('Os valores precisam ser maiores do que 0')
+      alert('O seu IMC é ' + imc + ' e sua classificação é Magreza')
     }
     // Desafio: implemente uma lógica para verificar o IMC, e junto com o Alert, mostrar a classificação do IMC
     // Por exemplo: "Seu IMC é 30 e sua Classificação é Sobrepeso"
