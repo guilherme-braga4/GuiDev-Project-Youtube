@@ -5,17 +5,18 @@
 
 .container {
   display: flex;
-  margin: 0;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  /* background-color: red; */
+  min-width: 100vw;
+  /* background-color: rgb(255, 169, 169); */
 }
 
 .form {
   display: flex;
+  margin: 0;
   height: 100%;
-  width: 100%;
+  min-width: 100vw;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -66,7 +67,16 @@
   flex-direction: column;
   width: 250px;
   height: 30%;
-  justify-content: space-around;
+}
+
+.container-forgot-password {
+  /* background-color: yellow; */
+  font-family: Poppins;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  color: white;
 }
 
 .container-input-label {
