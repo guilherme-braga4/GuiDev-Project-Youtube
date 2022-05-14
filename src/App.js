@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react'
-import AuthProvider, { AuthContext } from './Contexts/AuthContext'
+import React, {useContext} from 'react'
 import PublicRoutes from './Routes/public.routes'
 import PrivateRoutes from './Routes/private.routes'
+import { AuthContext } from './Contexts/AuthContext'
 
 function App() {
   const { auth } = useContext(AuthContext)
-  console.log('authApp', auth)
+  console.log("auth", auth)
   return auth ? <PrivateRoutes /> : <PublicRoutes />
 }
 
-export default App
+export default App;

@@ -1,16 +1,14 @@
-import React, { createContext, useState } from 'react'
-import App from '../App'
+import React, {createContext, useState} from 'react'
 
-//Context (Consumed) - Function
-export const AuthContext = createContext({})
+//Função que constroe o Provider e também permite Consumir os Dados Globais
+export const AuthContext = createContext()
 
-//Provider Function - Component
-function AuthProvider({ children }) {
+//Componente Provider para passar os valores para os Childrens
+function AuthProvider ({children}) {
   const [auth, setAuth] = useState(false)
-  console.log('auth', auth)
 
   return (
-    <AuthContext.Provider value={{ auth, setAuth }}>
+    <AuthContext.Provider value={{auth, setAuth}}>
       {children}
     </AuthContext.Provider>
   )

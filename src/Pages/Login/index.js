@@ -4,6 +4,7 @@ import { AuthContext } from '../../Contexts/AuthContext'
 import InputMask from 'react-input-mask'
 import { Button, Modal, Form } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { useNavigate  } from "react-router-dom";
 
 function LoginPage() {
   //Aqui iremos tornar a nossa "página dinâmica", através do Javascript
@@ -14,8 +15,10 @@ function LoginPage() {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
-  const value = useContext(AuthContext)
-  console.log('value', value)
+  const { setAuth, auth } = useContext(AuthContext)
+  console.log('auth', auth)
+
+  const navigate = useNavigate();
 
   //Função para armazenar o que foi digitado pelo usuário, dentro dos Inputs
   //Iremos criar um objeto
@@ -31,12 +34,13 @@ function LoginPage() {
     event.preventDefault()
     console.log('estamos dentro do handleSubmit')
     console.log('form handleSubmit', form)
-    if ((!form.altura && !form.peso) || !form.peso || !form.altura) {
-      alert('Os valores não podem ser inválidos. Digite o valor corretamente')
-    } else {
-      const imc = form.peso / (form.altura * form.altura)
-      console.log('imc', imc)
-      alert('O seu IMC é ' + imc)
+    if (form.email == 'guilherme@gmail.com' && form.senha == '123') {
+      setAuth(true)
+      navigate("/home");
+      window.alert('logado com sucesso')
+    }
+    else {
+      window.alert("dados inseridos incorretos, tente novamente!")
     }
   }
 
